@@ -1,0 +1,395 @@
+/* Chicago Pneumatic Specific Styles */
+
+/* Header Theme */
+.header-dark {
+    background-color: #000000; /* Dark background for CP */
+}
+
+/* Make the main header container a flex parent with relative positioning */
+.header-container {
+    position: relative; /* Essential for absolute positioning of children */
+    display: flex;
+    justify-content: space-between; /* Distributes left and right items with space between them */
+    align-items: center; /* Vertically aligns all items in the middle */
+    height: 100px; /* Adjust height of the header as needed */
+    padding: 0 20px; /* Add some padding on the sides to prevent overlap with centered logo */
+    z-index: 1002; /* Ensure header is above the full-screen carousel if needed */
+}
+
+/* This is the LEFT group: AE Logo + AE Text (for chicago.html) */
+.header-left-group {
+    display: flex; /* Make this group a flex container itself */
+    align-items: center; /* Vertically align items within this group */
+    gap: 20px; /* Space between AE logo and AE text */
+}
+
+/* Styling for the Airline Engineers text in the header (for chicago.html) */
+.ae-header-text {
+    color: #fff; /* White text color */
+    font-weight: bold;
+    font-size: 1.5rem; /* Adjust size as needed */
+    white-space: nowrap; /* Prevent text from wrapping */
+}
+
+/* This is the CENTER group: Chicago Pneumatic Logo */
+.cp-logo-centered {
+    position: absolute; /* Take it out of the normal document flow */
+    left: 50%; /* Position its left edge at the horizontal center of its parent */
+    top: 50%; /* Vertically center the logo */
+    transform: translate(-50%, -50%); /* Shift it back by half its own width and height to truly center it */
+    z-index: 10; /* Ensure it stays on top of other content if there's any overlap */
+}
+
+/* Styling for the Chicago Pneumatic logo itself */
+.cp-header-logo {
+    height: 60px; /* This remains constant for the CP logo */
+    width: auto; /* Maintain aspect ratio */
+}
+
+/* Other header-dark styles */
+.header-dark .nav ul li a {
+    color: #fff; /* White text/links for CP header */
+}
+
+.header-dark .nav ul li a::after {
+    background-color: var(--primary-color); /* Or a specific accent color for CP if desired, e.g., #e60000 */
+}
+
+.header-dark .nav ul li a:hover {
+    color: #e6e6e6; /* Lighter hover for white text */
+}
+
+.header-dark .mobile-menu-btn span {
+    background-color: #fff; /* White bars for mobile menu */
+}
+
+/* Rule to prevent header-dark from changing color when scrolled */
+.header-dark.scrolled {
+    background-color: #000000; /* Keep it black when scrolled */
+    box-shadow: 0 2px 10px rgba(0,0,0,0.3); /* Adjust box-shadow for dark background */
+}
+
+/* Override mobile menu background for dark header on mobile */
+@media screen and (max-width: 768px) {
+    .header-dark .nav.active {
+        background-color: white; /* Mobile menu background when open */
+    }
+    .header-dark .nav.active ul li a {
+        color: var(--text-color); /* Mobile menu link color when open */
+    }
+
+    /* Adjust layout for smaller screens if needed to avoid overlapping */
+    .header-container {
+        flex-wrap: wrap; /* Allows left/right content to wrap if needed */
+        height: auto; /* Allow height to adjust for wrapped content */
+        justify-content: center; /* Center flex items when wrapped */
+    }
+
+    .cp-logo-centered {
+        position: static; /* Or make it static to flow with other elements on small screens */
+        transform: none; /* Remove transform when static */
+        left: auto;
+        margin: 10px auto; /* Center it with margins when static */
+    }
+}
+
+
+/* Slideshow styles (reverted to basic) */
+.slideshow {
+    position: relative;
+    width: 100%;
+    max-width: 800px; /* Example max-width for a standard slideshow */
+    margin: 50px auto; /* Center it with margin */
+    overflow: hidden;
+    background-color: #f0f0f0; /* Light background for default slideshow */
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+}
+
+.slideshow .slide {
+    display: none; /* Hide all slides by default */
+    width: 100%;
+    height: auto;
+    transition: opacity 0.5s ease-in-out; /* Simple fade transition */
+}
+
+.slideshow .slide.active {
+    display: block; /* Show active slide */
+    opacity: 1;
+}
+
+.slideshow .slide img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.slideshow .slide-nav {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+    padding: 0 15px;
+    z-index: 10;
+}
+
+.slideshow .slide-nav button {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    font-size: 1.2rem;
+    transition: background-color 0.3s ease;
+}
+
+.slideshow .slide-nav button:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+
+/* NEW: Image Stack Carousel Styles (with full-screen, smooth transition, object-fit cover) */
+.image-stack-carousel {
+    background-color: var(--dark-color); /* Dark background for this section */
+    position: relative;
+    width: 100vw; /* Full viewport width */
+    height: 90vh; /* Set a specific height for the carousel section, adjust as needed */
+    padding-top: 100px; /* Add padding to account for the header */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden; /* Hide overflowing elements */
+    z-index: auto;
+    margin-bottom: 0; /* Remove bottom margin if this is a main hero section */
+}
+
+.carousel-container {
+    width: 100%; /* Changed to 100% to fill image-stack-carousel */
+    height: 100%; /* Take up full height of the carousel section */
+    position: relative;
+    perspective: 2000px; /* Increased perspective for better 3D depth */
+    display: flex; /* Added flex to center items within container */
+    justify-content: center;
+    align-items: center;
+}
+
+.carousel-images {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transform-style: preserve-3d;
+}
+
+.carousel-item {
+    position: absolute;
+    /* Base transformation - will be overridden by active/inactive states */
+    transform: translate(-50%, -50%) scale(0); /* Default scale down to zero to ensure no visual presence when inactive */
+    opacity: 0; /* Default hidden */
+    pointer-events: none; /* Default unclickable */
+    width: 85vw; /* Base width for potential future transitions if desired */
+    height: auto;
+    max-height: 80vh;
+    max-width: 950px;
+    left: 50%;
+    top: 50%;
+    /* Smooth transition for transform, opacity, and z-index */
+    transition: transform 0.6s ease-out, opacity 0.6s ease-out, z-index 0.0s 0.3s;
+    background-color: transparent;
+    box-shadow: none;
+    border-radius: 0;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.carousel-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain; /* Default for non-active images, though they are hidden */
+    display: block;
+}
+
+/* Active item - centered and prominent (full within the carousel section) */
+.carousel-item.active {
+    transform: translate(-50%, -50%) scale(1); /* Active item is flat and full scale */
+    opacity: 1; /* Fully visible */
+    z-index: 1000; /* Ensure it's on top */
+    pointer-events: auto;
+    width: 100%; /* Changed to 100% to fill carousel-container */
+    height: 100%; /* Fill parent's height */
+    max-width: none;
+    max-height: none;
+    border-radius: 0;
+    background-color: var(--dark-color); /* Set background for the active item */
+}
+
+.carousel-item.active img {
+    width: 100%; /* Image fills the active item's new wider width */
+    height: 100%; /* Image fills the active item */
+    object-fit: cover; /* Changed to 'cover' to fill space, potentially cropping */
+}
+
+/* All other (non-active) items should be completely hidden */
+.carousel-item.prev,
+.carousel-item.next,
+.carousel-item.stacked-left,
+.carousel-item.stacked-right {
+    opacity: 0;
+    pointer-events: none;
+    transform: translate(-50%, -50%) scale(0); /* Explicitly scale down to zero */
+    z-index: 1; /* Low z-index */
+}
+
+/* Carousel Controls (for image-stack-carousel) */
+.image-stack-carousel .carousel-controls {
+    position: absolute; /* Relative to .image-stack-carousel */
+    bottom: 40px; /* Push controls slightly up from the bottom */
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 40px; /* Increased gap */
+    z-index: 110; /* Ensure controls are above carousel items */
+}
+
+.image-stack-carousel .carousel-controls button {
+    background-color: var(--primary-color);
+    color: #fff;
+    border: none;
+    padding: 18px 25px; /* Larger buttons */
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    font-size: 1.3rem; /* Larger font */
+    transition: background-color 0.3s ease;
+}
+
+.image-stack-carousel .carousel-controls button:hover {
+    background-color: var(--secondary-color); /* Darker shade on hover */
+}
+
+
+/* Brand Hero Section - Specific Background Color for CP */
+.brand-hero {
+    background-color: #e60000;
+    color: var(--light-color);
+    padding-top: 150px;
+}
+
+.brand-hero h1 {
+    color: var(--accent-color);
+}
+
+/* Buttons for CP page */
+.btn-primary {
+    background-color: var(--accent-color);
+    color: #fff;
+}
+
+.btn-primary:hover {
+    background-color: var(--primary-color);
+}
+
+.btn-secondary {
+    background-color: transparent;
+    color: var(--accent-color);
+    border: 2px solid var(--accent-color);
+}
+
+.btn-secondary:hover {
+    background-color: var(--accent-color);
+    color: #fff;
+}
+
+/* Section titles and icons */
+.section-title {
+    color: var(--dark-color);
+}
+
+.section-title::after {
+    background-color: var(--accent-color);
+}
+
+/* Feature items */
+.feature-item i {
+    color: var(--accent-color);
+}
+
+/* Table styling */
+.tech-data th {
+    background-color: var(--dark-color);
+    color: #fff;
+}
+
+/* Benefits list checkmark */
+.benefits-list li::before {
+    color: var(--accent-color);
+}
+
+/* Media Queries for Responsiveness for .image-stack-carousel */
+@media screen and (max-width: 992px) {
+    .image-stack-carousel {
+        padding-top: 80px;
+        height: 80vh;
+    }
+    .carousel-item {
+        width: 90vw;
+        height: auto;
+        max-height: 75vh;
+        max-width: 700px;
+    }
+    .carousel-item.active {
+        width: 100%;
+    }
+    .image-stack-carousel .carousel-controls button {
+        padding: 15px 20px;
+        font-size: 1.1rem;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .image-stack-carousel {
+        height: 60vh;
+        padding-top: 80px;
+    }
+    .carousel-item {
+        width: 90vw;
+        height: auto;
+        max-height: 50vh;
+    }
+    .carousel-item.active {
+        width: 100%;
+    }
+    .image-stack-carousel .carousel-controls {
+        bottom: 20px;
+        gap: 20px;
+    }
+    .image-stack-carousel .carousel-controls button {
+        padding: 12px 18px;
+        font-size: 1rem;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .image-stack-carousel {
+        padding-top: 70px;
+        height: 50vh;
+    }
+    .carousel-item {
+        width: 95vw;
+        height: auto;
+        max-height: 40vh;
+    }
+    .carousel-item.active {
+        width: 100%;
+    }
+    .image-stack-carousel .carousel-controls {
+        gap: 15px;
+    }
+    .image-stack-carousel .carousel-controls button {
+        padding: 10px 15px;
+        font-size: 0.9rem;
+    }
+}

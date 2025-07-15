@@ -3,201 +3,207 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CPM 3-7.5 HP Screw Compressors</title>
-    <link rel="stylesheet" href="styles.css">
-    <script src="script.js" defer></script>   <!-- Link to slideshow JS -->
+    <title>Chicago Pneumatic - Airline Engineers</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/chicago-pneumatic.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 <body>
-    <!-- Header -->
-    <header class="chicago-pneumatic-header">
-        <div class="logo-container">
-            <img src="cplogo.jpeg" alt="Chicago Pneumatic Logo" class="logo" width="150" height="50">
-        </div>
-        <div class="header-text-container">
-            <h1 class="company-name">Airline Engineers</h1>
+    <header class="header header-dark">
+        <div class="container header-container">
+            <div class="logo partner-logo">
+                <a href="index.html"><img src="images/brands/aelogo.png" alt="Airline Engineers Logo"></a>
+            </div>
+
+            <div class="company-name">
+                <span>Airline Engineers</span>
+                <img src="images/brands/cplogo.png" alt="Chicago Pneumatic Logo" class="cp-header-logo">
+            </div>
+
+            <div class="header-right">
+                <nav class="nav">
+                    <ul>
+                        <li><a href="index.html#history">History</a></li>
+                        <li><a href="index.html#about">About Us</a></li>
+                        <li><a href="index.html#services">Services</a></li>
+                        <li><a href="index.html#companies">Companies</a></li>
+                        <li><a href="index.html#contact">Contact</a></li>
+                    </ul>
+                </nav>
+                <div class="mobile-menu-btn">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
         </div>
     </header>
 
-    <!-- Main Content -->
-    <main class="product-content container">
+    <section class="brand-about section">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">About Chicago Pneumatic</h2>
+            <div class="brand-about-content" data-aos="fade-up" data-aos-delay="100">
+                <p>Chicago Pneumatic is a global manufacturer of high-performance tools, air compressors and equipment for construction, manufacturing and vehicle service industries. For over 120 years, Chicago Pneumatic has been designing and manufacturing high-quality, innovative products that meet the demands of professionals worldwide.</p>
+                <p>As an authorized dealer, Airline Engineers provides sales, installation, maintenance, and repair services for the complete range of Chicago Pneumatic products, ensuring optimal performance and longevity of your equipment.</p>
+            </div>
 
-        <!-- Slideshow Section -->
-        <div class="slideshow-container">
-            <div class="mySlides fade">
-                <div class="numbertext">1 / 3</div>
-                <img src="cp1.png" style="width:100%">
-                <div class="text">Caption One</div>
+            <div class="slideshow" data-aos="fade-up">
+                <div class="slide active">
+                    <img src="images/products/cp/cp1.png" alt="Chicago Pneumatic Air Compressor">
+                    <h3>Industrial Air Compressor</h3>
+                </div>
+                <div class="slide">
+                    <img src="images/products/cp/cp2.png" alt="Chicago Pneumatic Pneumatic Tools">
+                    <h3>Professional Pneumatic Tools</h3>
+                </div>
+                <div class="slide">
+                    <img src="images/products/cp/cp3.png" alt="Chicago Pneumatic Portable Compressor">
+                    <h3>Portable Compressor Solutions</h3>
+                </div>
+                <div class="slide-nav">
+                    <button class="prev-slide"><i class="fas fa-chevron-left"></i></button>
+                    <button class="next-slide"><i class="fas fa-chevron-right"></i></button>
+                </div>
             </div>
-            <div class="mySlides fade">
-                <div class="numbertext">2 / 3</div>
-                <img src="cp2.jpeg" style="width:100%">
-                <div class="text">Caption Two</div>
+
+            <h2 class="section-title" data-aos="fade-up">Key Features</h2>
+            <div class="features-grid" data-aos="fade-up">
+                <div class="feature-item">
+                    <i class="fas fa-tachometer-alt"></i>
+                    <h3>High Performance</h3>
+                    <p>Exceptional power and efficiency for demanding industrial applications</p>
+                </div>
+                <div class="feature-item">
+                    <i class="fas fa-bolt"></i>
+                    <h3>Energy Efficient</h3>
+                    <p>Reduced energy consumption with advanced VSD technology</p>
+                </div>
+                <div class="feature-item">
+                    <i class="fas fa-cogs"></i>
+                    <h3>Reliability</h3>
+                    <p>Built to last with robust components and quality manufacturing</p>
+                </div>
+                <div class="feature-item">
+                    <i class="fas fa-volume-down"></i>
+                    <h3>Low Noise</h3>
+                    <p>Quiet operation for improved workplace environment</p>
+                </div>
             </div>
-            <div class="mySlides fade">
-                <div class="numbertext">3 / 3</div>
-                <img src="cp3.jpeg" style="width:100%">
-                <div class="text">Caption Three</div>
-            </div>
-            <a class="prev" onclick="plusSlides(-1)">❮</a>
-            <a class="next" onclick="plusSlides(1)">❯</a>
-        </div>
-        <br>
-        <div style="text-align:center">
-            <span class="dot" onclick="currentSlide(1)"></span>
-            <span class="dot" onclick="currentSlide(2)"></span>
-            <span class="dot" onclick="currentSlide(3)"></span>
-        </div>
-        <!-- Technical Data Section -->
-        <section class="technical-data">
-            <h2>Technical Data</h2>
-            <div class="technical-data-container">
+
+            <h2 class="section-title" data-aos="fade-up">Technical Specifications</h2>
+            <div class="tech-data" data-aos="fade-up">
                 <table>
                     <thead>
                         <tr>
                             <th>Model</th>
-                            <th>Pressure <br>(BAR G)</th>
-                            <th>CFM</th>
-                            <th>Noise Level <br>(dB(A))</th>
-                            <th>Weight<br> (KG)</th>
+                            <th>Power (HP)</th>
+                            <th>Capacity (CFM)</th>
+                            <th>Pressure (Bar)</th>
+                            <th>Noise Level (dB)</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
-                            <td>CPM 3</td>
-                            <td>8</td>
-                            <td>176</td>
-                            <td>61</td>
-                            <td>209</td>
-                        </tr>
-                        <tr>
-                            <td>CPM 4</td>
-                            <td>11</td>
-                            <td>182</td>
+                            <td>CP-5.5</td>
+                            <td>5.5</td>
+                            <td>21.2</td>
+                            <td>7-10</td>
                             <td>65</td>
-                            <td>216</td>
                         </tr>
                         <tr>
-                            <td>CPM 5.5</td>
+                            <td>CP-7.5</td>
+                            <td>7.5</td>
+                            <td>28.3</td>
+                            <td>7-10</td>
+                            <td>67</td>
+                        </tr>
+                        <tr>
+                            <td>CP-10</td>
                             <td>10</td>
-                            <td>210</td>
-                            <td>65</td>
-                            <td>210</td>
+                            <td>37.4</td>
+                            <td>7-13</td>
+                            <td>69</td>
                         </tr>
                         <tr>
-                            <td>CPM 7.5</td>
-                            <td>10</td>
-                            <td>216</td>
-                            <td>65</td>
-                            <td>216</td>
+                            <td>CP-15</td>
+                            <td>15</td>
+                            <td>56.5</td>
+                            <td>7-13</td>
+                            <td>72</td>
+                        </tr>
+                        <tr>
+                            <td>CP-20</td>
+                            <td>20</td>
+                            <td>75.2</td>
+                            <td>7-13</td>
+                            <td>74</td>
                         </tr>
                     </tbody>
                 </table>
-                <div class="technical-data-image">
-                    <img src="cp1.png" alt="Technical Data Image" class="product-image">
-                </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-
-        <!-- Features Section -->
-        <section class="features">
-            <h2>Key Features</h2>
-            <div class="features-grid">
-                <div class="feature-item">
-                    <img src="quiteoperation.png" alt="Quiet Operation">
-                    <h3>Quiet Operation</h3>
-                    <p>Noise levels as low as 61 dB(A), allowing placement in most work environments without disturbances.</p>
-                </div>
-                <div class="feature-item">
-                    <img src="compact.webp" alt="Compact Design">
-                    <h3>Compact Design</h3>
-                    <p>Fits easily in small spaces, ideal for light industrial applications.</p>
-                </div>
-                <div class="feature-item">
-                    <img src="energyefficiency.png" alt="Energy Efficiency">
-                    <h3>Energy Efficiency</h3>
-                    <p>More output with less energy consumption compared to piston compressors.</p>
-                </div>
-                <div class="feature-item">
-                    <img src="continuousworking.webp" alt="Continuous Operation">
-                    <h3>Continuous Duty</h3>
-                    <p>Designed for tough working conditions with low maintenance costs.</p>
-            </section>
-        <section class="features">
-                <h2>Why choose CPM screw compressors ?</h2>
-                <div class="technical-data-container">        
-                    <table> 
-                    <tr>
-                        <th>Traditional Piston Compressors</th>
-                        <th>VS</th>
-                        <th>CPM Screw Compressors</th>
-                    </tr>
-                    <tr></tr>
-                    <tr>
-                        <td>70-75% of the intake air</td>
-                        <td>Air yeld</td>
-                        <td>95% of the intake air</td>
-                    </tr>
-                    <tr>
-                        <td>Greater than 80 dB(A)</td>
-                        <td>Sound Level</td>
-                        <td>From 61 to 65 dB(A)</td>
-                    </tr>
-                    <tr>
-                        <td>For intermittent use</td>
-                        <td>Operation</td>
-                        <td>For continuous use</td>
-                    </tr>
-                    <tr>
-                        <td>High content of residual oil and humidity</td>
-                        <td>Air Quality</td>
-                        <td>Low oil content and dry air in the version with dryer</td>
-                    </tr>
-                    <tr>
-                        <td>Alternating and pulsating</td>
-                        <td>Compression</td>
-                        <td>Continuous and consistent</td>
-                    </tr>
-                    <tr>
-                        <td>High</td>
-                        <td>Vibrations</td>
-                        <td>Absent</td>
-                    </tr>
-                    <tr>
-                        <td>Thermal circuit breaker</td>
-                        <td>Sound Protection</td>
-                        <td>Magnetic and thermal circuit breaker</td>
-                    </tr>
-                </table>
-                </div>
-            
-
-        <!-- Benefits Section -->
-        <section class="benefits">
-            <h2>Benefits</h2>
-            <ul>
-                <li>Lower oil residual in compressed air for cleaner operation.</li>
-                <li>Pulsation-free air for consistent performance.</li>
-                <li>Increased reliability with fewer moving parts.</li>
-                <li>Fast and cost-effective maintenance.</li>
+    <section class="benefits section">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">Benefits</h2>
+            <ul class="benefits-list" data-aos="fade-up">
+                <li>Reduced operational costs through energy-efficient design</li>
+                <li>Increased productivity with reliable, high-performance equipment</li>
+                <li>Lower maintenance requirements and extended service intervals</li>
+                <li>Improved workplace environment with low-noise operation</li>
+                <li>Comprehensive warranty and service support through Airline Engineers</li>
+                <li>Customizable solutions to meet specific industrial requirements</li>
+                <li>Advanced monitoring and control systems for optimal performance</li>
+                <li>Compact design requiring minimal installation space</li>
             </ul>
-            <div class="benefits-image">
-                <img src="cplogo.jpeg" alt="Benefits of CPM Compressors" class="product-image">
+        </div>
+    </section>
+
+    <section class="brand-cta section">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">Ready to Learn More?</h2>
+            <div data-aos="fade-up">
+                <a href="#" class="btn btn-primary">Download Brochure</a>
+                <a href="index.html#contact" class="btn btn-secondary">Contact Us</a>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <!-- Call to Action Section -->
-        <section class="call-to-action">
-            <h2>Interested in this product?</h2>
-            <p>Contact us today to learn more about the CPM 3-7.5 HP Screw Compressors and how they can benefit your operations.</p>
-            <a href="contact.html" class="cta-button">Contact Us</a>
-        </section>
-    </main>
-
-    <!-- Footer -->
-    <footer>
-        <p>&copy; 2024 Chicago Pneumatic. All rights reserved.</p>
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <img src="images/logo-white.png" alt="Airline Engineers Logo">
+                </div>
+                <div class="footer-links">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html#history">History</a></li>
+                        <li><a href="index.html#about">About Us</a></li>
+                        <li><a href="index.html#services">Services</a></li>
+                        <li><a href="index.html#companies">Companies</a></li>
+                        <li><a href="index.html#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-social">
+                    <h3>Connect With Us</h3>
+                    <div class="social-icons">
+                        <a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
+                        <a href="#" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Airline Engineers. All rights reserved.</p>
+            </div>
+        </div>
     </footer>
 
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="js/main.js"></script>
 </body>
 </html>

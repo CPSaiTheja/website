@@ -3,155 +3,286 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Airline Engineers - Experts in Retail Business">
-    <title>Airline Engineers</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Airline Engineers - Industrial Excellence Since 2003</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 <body>
-    <header class="hero-section">
-        <div class="overlay"></div>
+    <header class="header">
         <div class="container">
-            <img src="logo.png" alt="Company Logo" class="logo">
-            <h1>Airline Engineers</h1>
-            <p>Your Trusted Retail Solutions</p>
-            <a href="#services" class="cta-button">Explore Services</a>
-            <a href="#companies" class="cta-button">Companies</a>
+            <div class="header-left">
+                <div class="logo">
+                    <a href="index.html"><img src="images/brands/aelogo.png" alt="Airline Engineers Logo">
+                </div>
+                <span class="ae-header-text">Airline Engineers</span></a>
+            </div>
+            <nav class="nav">
+                <ul>
+                    <li><a href="#companies">Companies</a></li>
+                    <li><a href="#history">History</a></li>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#services">Services</a></li>                   
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="mobile-menu-btn">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
         </div>
     </header>
 
-    <nav class="navbar">
-        <ul>
-            <li><a href="#history">History</a></li>
-            <li><a href="#about">About Us</a></li>
-            <li><a href="#services">Services</a></li>
-            <li><a href="#companies">Companies</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
-    </nav>
-
-    <section id="companies" class="companies-section">
+    <section class="hero">
+        <div id="particles-js"></div>
+        <div class="overlay"></div>
         <div class="container">
-            <h2>Partner Companies</h2>
+            <div class="hero-content" data-aos="fade-up">
+                <h1>Airline Engineers</h1>
+                <p>Delivering Industrial Excellence Since 2003</p>
+                <a href="#companies" class="btn btn-primary">Explore Brands</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="companies" class="companies section">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">Our Partner Brands</h2>
             <div class="companies-grid">
-                <div class="company-card">
-                    <img src="cpwlogo.png" alt="Chicago Pneumatic Logo" class="company-logo">
+                <div class="company-card" data-aos="fade-up">
+                    <img src="images/brands/chicago-pneumatic.png" alt="Chicago Pneumatic Logo">
                     <h3>Chicago Pneumatic</h3>
-                    <p>(CP) is a leading manufacturer of power tools and air compressors.</p>
-                    <a href="commingsoon.html" class="view-more-button">view more</a>
+                    <p>Industrial air compressors and pneumatic tools</p>
+                    <a href="chicago.html" class="btn btn-secondary">VIEW MORE</a>
                 </div>
-                <div class="company-card">
-                    <img src="ltlogo.png" alt="L&T Logo" class="company-logo">
-                    <h3>Lauritz Knudsen</h3>
-                    <p>is a leading provider of automation solutions.</p>
-                    <a href="commingsoon.html" class="view-more-button">View More</a>
-                </div>
-                <div class="company-card">
-                    <img src="yokogawalogo.png" alt="yokogowa Logo" class="company-logo">
-                    <h3>Yokogawa</h3>
-                    <p>is a leading provider of automation solutions.</p>
-                    <a href="commingsoon.html" class="view-more-button">View More</a>
-                </div>
-                <div class="company-card">
-                    <img src="manateclogo.png" alt="manatec Logo" class="company-logo">
-                    <h3>Manatec</h3>
-                    <p>is a leading provider of automation solutions.</p>
-                    <a href="commingsoon.html" class="view-more-button">View More</a>
-                </div>
-                <div class="company-card">
-                    <img src="karcherlogo.png" alt="Kärcher Logo" class="company-logo">
+                <div class="company-card" data-aos="fade-up" data-aos-delay="100">
+                    <img src="images/brands/karcher.png" alt="Kärcher Logo">
                     <h3>Kärcher</h3>
-                    <p>is a German company specializing in cleaning equipment.</p>
-                    <a href="commingsoon.html" class="view-more-button">View More</a>
-                </div> 
-                <div class="company-card">
-                    <img src="bchlogo.jpg" alt="bch Logo" class="company-logo">
+                    <p>Professional cleaning equipment and solutions</p>
+                    <a href="karcher.html" class="btn btn-secondary">VIEW MORE</a>
+                </div>
+                <div class="company-card" data-aos="fade-up" data-aos-delay="200">
+                    <img src="images/brands/yokogawa.png" alt="Yokogawa Logo">
+                    <h3>Yokogawa</h3>
+                    <p>Industrial automation and control systems</p>
+                    <a href="yokogawa.html" class="btn btn-secondary">VIEW MORE</a>
+                </div>
+                <div class="company-card" data-aos="fade-up" data-aos-delay="300">
+                    <img src="images/brands/lauritz-knudsen.png" alt="Lauritz Knudsen Logo">
+                    <h3>Lauritz Knudsen</h3>
+                    <p>Electrical installation materials and systems</p>
+                    <a href="lauritz.html" class="btn btn-secondary">VIEW MORE</a>
+                </div>
+                <div class="company-card" data-aos="fade-up" data-aos-delay="400">
+                    <img src="images/brands/manatec.png" alt="Manatec Logo">
+                    <h3>Manatec</h3>
+                    <p>Automotive diagnostic and testing equipment</p>
+                    <a href="manatec.html" class="btn btn-secondary">VIEW MORE</a>
+                </div>
+                <div class="company-card" data-aos="fade-up" data-aos-delay="500">
+                    <img src="images/brands/bch.png" alt="Bhartia Cutler Hammer Logo">
                     <h3>Bhartia Cutler Hammer</h3>
-                    <p>(CP) is a leading manufacturer of power tools and air compressors.</p>
-                    <a href="commingsoon.html" class="view-more-button">view more</a>
+                    <p>Electrical distribution and control products</p>
+                    <a href="bhartia.html" class="btn btn-secondary">VIEW MORE</a>
                 </div>
-                <div class="company-card">
-                    <img src="tridentlogo.png" alt="trident Logo" class="company-logo">
+                <div class="company-card" data-aos="fade-up" data-aos-delay="600">
+                    <img src="images/brands/trident.png" alt="Trident Logo">
                     <h3>Trident</h3>
-                    <p>is a leading provider of automation solutions.</p>
-                    <a href="commingsoon.html" class="view-more-button">View More</a>
-                </div>               
+                    <p>Industrial tools and equipment solutions</p>
+                    <a href="trident.html" class="btn btn-secondary">VIEW MORE</a>
+                </div>
             </div>
         </div>
     </section>
 
-    <section id="history" class="about-section">
+    <section id="history" class="history section">
         <div class="container">
-            <h2>History</h2>
-            <p>Established in the year of 2003 with a vision of serving the Indian Industry with various Industrial solutions pertaining to capital equipments & Accessories...</p>
+            <h2 class="section-title" data-aos="fade-up">Our Legacy</h2>
+            <div class="history-content" data-aos="fade-up" data-aos-delay="100">
+                <p>Established in 2003, Airline Engineers has grown from a small technical service provider to a trusted partner in the industrial solutions sector. With a commitment to excellence and technical precision, we have built lasting relationships with global brands and local industries alike.</p>
+
+                <div class="timeline">
+                    <div class="timeline-item" data-aos="fade-right">
+                        <div class="year">2003</div>
+                        <div class="content">
+                            <h3>Foundation</h3>
+                            <p>Airline Engineers was established with a vision to provide quality industrial solutions.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item" data-aos="fade-left">
+                        <div class="year">2008</div>
+                        <div class="content">
+                            <h3>Expansion</h3>
+                            <p>Became authorized dealers for multiple international brands.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item" data-aos="fade-right">
+                        <div class="year">2015</div>
+                        <div class="content">
+                            <h3>Service Excellence</h3>
+                            <p>Expanded service portfolio to include comprehensive maintenance contracts.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item" data-aos="fade-left">
+                        <div class="year">2023</div>
+                        <div class="content">
+                            <h3>Today</h3>
+                            <p>A trusted name in industrial solutions with a wide network of satisfied clients.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
-    <section id="about" class="about-section">
+    <section id="about" class="about section">
         <div class="container">
-            <h2>About Us</h2>
-            <p>Is a conglomeration of highly skilled technical personnel with excellent track records...</p>
+            <h2 class="section-title" data-aos="fade-up">About Us</h2>
+            <div class="about-content">
+                <div class="about-image" data-aos="fade-right">
+                    <img src="images/about.jpg" alt="Airline Engineers Team">
+                </div>
+                <div class="about-text" data-aos="fade-left">
+                    <h3>Our Vision</h3>
+                    <p>To be the leading provider of industrial solutions, recognized for our technical expertise, quality service, and customer satisfaction.</p>
+
+                    <h3>Our Mission</h3>
+                    <p>To deliver exceptional industrial solutions through innovative approaches, technical excellence, and unwavering commitment to our clients' success.</p>
+
+                    <h3>Core Values</h3>
+                    <ul>
+                        <li><strong>Quality:</strong> We maintain the highest standards in all our products and services.</li>
+                        <li><strong>Precision:</strong> We approach every task with meticulous attention to detail.</li>
+                        <li><strong>Timely Service:</strong> We respect our clients' time and deliver as promised.</li>
+                        <li><strong>Technical Expertise:</strong> Our team consists of skilled professionals with extensive industry knowledge.</li>
+                    </ul>
+                </div>
+            </div>
         </div>
     </section>
 
-    <section id="services" class="services-section">
+    <section id="services" class="services section">
         <div class="container">
-            <h2>Our Services</h2>
-            <div class="service">
-                <img src="service1.jpg" alt="Web Development Icon" class="service-icon">
-                <div class="service-text">
+            <h2 class="section-title" data-aos="fade-up">Our Services</h2>
+            <div class="services-grid">
+                <div class="service-card" data-aos="fade-up">
+                    <div class="icon">
+                        <i class="fas fa-tools"></i>
+                    </div>
                     <h3>Compressor Repair & Maintenance</h3>
-                    <p>We provide comprehensive compressor repair and maintenance services, executed by a team of highly skilled and certified technicians. Our commitment is to restore your systems to peak operational efficiency with minimal downtime.</p>
+                    <p>Comprehensive repair and maintenance services for all types of industrial compressors.</p>
                 </div>
-            </div>
-            <div class="service">
-                <img src="service2.jpg" alt="Mobile App Development Icon" class="service-icon">
-                <div class="service-text">
-                    <h3>VFD Sales & Solutions</h3>
-                    <p>Enhance system performance and reduce energy consumption with our curated offering of Variable Frequency Drives (VFDs) from industry innovator Lauritz Knudsen. We provide solutions for precise speed, torque, and process control.</p>
+                <div class="service-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="icon">
+                        <i class="fas fa-bolt"></i>
+                    </div>
+                    <h3>VFD Sales & Installation</h3>
+                    <p>Expert sales, installation, and configuration of Variable Frequency Drives for optimal performance.</p>
+                </div>
+                <div class="service-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="icon">
+                        <i class="fas fa-cogs"></i>
+                    </div>
+                    <h3>Industrial Automation Setup</h3>
+                    <p>Custom automation solutions designed to enhance efficiency and productivity.</p>
+                </div>
+                <div class="service-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="icon">
+                        <i class="fas fa-headset"></i>
+                    </div>
+                    <h3>On-site Technical Support</h3>
+                    <p>Prompt and reliable technical support at your facility to minimize downtime.</p>
+                </div>
+                <div class="service-card" data-aos="fade-up" data-aos-delay="400">
+                    <div class="icon">
+                        <i class="fas fa-clipboard-check"></i>
+                    </div>
+                    <h3>Preventive Maintenance Contracts</h3>
+                    <p>Scheduled maintenance programs to prevent breakdowns and extend equipment life.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="contact" class="contact-section">
+    <section id="contact" class="contact section">
         <div class="container">
-            <h2>Contact Us</h2>
-            <style>
-                .contact-info {
-                  display: flex;
-                  flex-direction: column;
-                  align-items: flex-start; /* Align items to the start of the cross axis (left) */
-                  width: fit-content; /* Make the container fit its content */
-                  margin: 0 auto; /* Center the container horizontally */
-                }
-              
-                .contact-info p {
-                  margin: 5px 0;
-                  text-align: left;
-                }
-              
-                .contact-info strong {
-                  display: inline-block;
-                  min-width: 80px;
-                }
-              </style>
-              
-              <div class="contact-info">
-                <p><strong>Address:</strong> 10-132, P V N Colony, Hyderabad, Telangana</p>
-                <p><strong>Email:</strong> infoairline@gmail.com</p>
-                <p><strong>Phone:</strong> +91 8978600525</p>
-                <p><strong>GST NO:</strong> 36AFDPC0930P1ZJ</p>
-              </div>
+            <h2 class="section-title" data-aos="fade-up">Contact Us</h2>
+            <div class="contact-content">
+                <div class="contact-info" data-aos="fade-right">
+                    <h3>Get In Touch</h3>
+                    <div class="info-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <p>10-132, P V N Colony, Hyderabad, Telangana</p>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-envelope"></i>
+                        <p>infoairline@gmail.com</p>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-phone"></i>
+                        <p>+91 8978600525</p>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-file-invoice"></i>
+                        <p>GST NO: 36AFDPC0930P1ZJ</p>
+                    </div>
+                </div>
+                <div class="contact-form" data-aos="fade-left">
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <label for="name">Name</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Send Message</button>
+                    </form>
+                </div>
+            </div>
         </div>
-        
     </section>
 
     <footer class="footer">
         <div class="container">
-            <p>&copy; 2024 Airline Engineers. All Rights Reserved.</p>
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <img src="images/logo-white.png" alt="Airline Engineers Logo">
+                </div>
+                <div class="footer-links">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="#history">History</a></li>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#companies">Companies</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-social">
+                    <h3>Connect With Us</h3>
+                    <div class="social-icons">
+                        <a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
+                        <a href="#" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Airline Engineers. All rights reserved.</p>
+            </div>
         </div>
     </footer>
 
-    <script src="script.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+    <script src="js/main.js"></script>
 </body>
 </html>

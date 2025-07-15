@@ -1,0 +1,246 @@
+/* Karcher Specific Styles - Yellow Theme */
+
+/* Define Karcher Yellow and complementary colors */
+:root {
+    --karcher-yellow: #feda00; /* Kärcher's signature yellow */
+    --karcher-dark-grey: #333333;
+    --karcher-light-grey: #f0f0f0;
+    --karcher-blue-accent: #007bff; /* Keep a blue accent for general links/buttons if needed, or change to a darker grey */
+    --karcher-text-color: #333; /* Dark text for readability on light backgrounds */
+    --karcher-white: #ffffff;
+}
+
+/* Header Theme */
+.header-karcher {
+    background-color: var(--karcher-yellow); /* Yellow background for Kärcher header */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); /* Stronger shadow for yellow header */
+}
+
+/* Make the main header container a flex parent with relative positioning */
+.header-container {
+    position: relative; /* Essential for absolute positioning of children */
+    display: flex;
+    justify-content: space-between; /* Distributes left and right items with space between them */
+    align-items: center; /* Vertically aligns all items in the middle */
+    height: 100px; /* Adjust height of the header as needed */
+    padding: 0 20px; /* Add some padding on the sides to prevent overlap with centered logo */
+}
+
+/* This is the LEFT group: AE Logo + AE Text */
+.header-left-group {
+    display: flex; /* Make this group a flex container itself */
+    align-items: center; /* Vertically align items within this group */
+    gap: 20px; /* Space between AE logo and AE text */
+    flex-shrink: 1; /* Allow to shrink */
+    min-width: 0; /* Prevent content from overflowing parent */
+}
+
+/* Styling for the Airline Engineers logo within the Karcher header */
+.ae-logo-in-header {
+    height: 40px; /* Set a specific smaller height for the AE logo */
+    width: auto; /* Maintain aspect ratio */
+}
+
+/* Styling for the Airline Engineers text in the header */
+.ae-header-text {
+    color: var(--karcher-dark-grey); /* Dark grey text color for AE text on yellow header */
+    font-weight: bold;
+    font-size: 1.5rem;
+    white-space: nowrap; /* Prevent text from wrapping */
+}
+
+/* This is the CENTER group: Karcher Logo */
+.karcher-logo-centered {
+    position: absolute; /* Take it out of the normal document flow */
+    left: 50%; /* Position its left edge at the horizontal center of its parent */
+    top: 60%; /* Added: Vertically center the logo */
+    transform: translate(-50%, -50%); /* Adjusted: Shift it back by half its own width and height to truly center it */
+    z-index: 10; /* Ensure it stays on top of other content if there's any overlap */
+}
+
+/* Styling for the Kärcher logo itself */
+.karcher-header-logo {
+    height: 60px; /* This remains constant for the Kärcher logo */
+    width: auto; /* Maintain aspect ratio */
+}
+
+/* This is the RIGHT group: Navigation + Mobile Menu Button */
+.header-right {
+    display: flex;
+    align-items: center;
+    gap: 30px; /* Space between nav and mobile menu button */
+    flex-shrink: 1; /* Allow to shrink */
+    min-width: 0; /* Prevent content from overflowing parent */
+}
+
+/* Navigation links in the Karcher header */
+.header-karcher .nav ul li a {
+    color: var(--karcher-dark-grey); /* Dark grey links for Kärcher header */
+    font-weight: 600;
+}
+
+.header-karcher .nav ul li a::after {
+    background-color: var(--karcher-dark-grey); /* Dark grey underline */
+}
+
+.header-karcher .nav ul li a:hover {
+    color: var(--karcher-text-color); /* Darker hover for dark text */
+}
+
+/* Mobile menu button bars */
+.header-karcher .mobile-menu-btn span {
+    background-color: var(--karcher-dark-grey); /* Dark grey bars for mobile menu */
+}
+
+/* Rule to prevent header-karcher from changing color when scrolled */
+.header-karcher.scrolled {
+    background-color: var(--karcher-yellow); /* Keep it yellow when scrolled */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); /* Adjust box-shadow for yellow background */
+}
+
+/* Brand Hero Section - Specific Background Color for Kärcher */
+.brand-hero {
+    background-color: var(--karcher-dark-grey); /* Dark grey background for hero section */
+    color: var(--karcher-white); /* White text on dark background */
+    padding-top: 150px; /* Added: Adjust for fixed header height if content is behind it */
+}
+
+.brand-hero h1 {
+    color: var(--karcher-yellow); /* Yellow heading in hero */
+}
+
+/* Buttons for Karcher page */
+.brand-hero-content .btn-primary {
+    margin-top: 30px; /* Added: Pushes the buttons down */
+}
+
+.btn-primary {
+    background-color: var(--karcher-yellow); /* Primary button yellow */
+    color: var(--karcher-dark-grey); /* Dark text on yellow button */
+}
+
+.btn-primary:hover {
+    background-color: #e0b000; /* Slightly darker yellow on hover */
+    color: var(--karcher-dark-grey);
+}
+
+.btn-secondary {
+    background-color: transparent;
+    color: var(--karcher-dark-grey); /* Secondary button dark text */
+    border: 2px solid var(--karcher-dark-grey); /* Dark border */
+}
+
+.btn-secondary:hover {
+    background-color: var(--karcher-dark-grey); /* Dark background on hover */
+    color: var(--karcher-yellow); /* Yellow text on hover */
+}
+
+/* Section titles and icons */
+.section-title {
+    color: var(--karcher-dark-grey); /* Dark grey for section titles */
+}
+
+.section-title::after {
+    background-color: var(--karcher-yellow); /* Yellow underline for titles */
+}
+
+/* Feature items */
+.feature-item i {
+    color: var(--karcher-yellow); /* Yellow icons */
+}
+
+/* Table styling */
+.tech-data th {
+    background-color: var(--karcher-light-grey); /* Light grey for table headers */
+    color: var(--karcher-dark-grey);
+}
+
+/* Benefits list checkmark */
+.benefits-list li::before {
+    color: var(--karcher-yellow); /* Yellow checkmark */
+}
+
+/* Adjustments for mobile responsiveness on brand pages */
+@media screen and (max-width: 768px) {
+    .header-container {
+        flex-wrap: wrap;
+        height: auto;
+        justify-content: center;
+        padding: 15px 20px;
+    }
+
+    .header-left-group {
+        flex-basis: 100%; /* Take full width on small screens */
+        justify-content: center; /* Center content within this group */
+        padding: 10px 0; /* Add vertical spacing */
+        order: 1; /* Ensure it appears first */
+    }
+
+    .karcher-logo-centered {
+        position: static; /* Make it static to flow with other elements on small screens */
+        transform: none; /* Remove transform when static */
+        left: auto;
+        margin: 10px auto; /* Center it with margins when static */
+        order: 2; /* Ensure it appears second */
+    }
+
+    .header-right {
+        flex-basis: 100%; /* Take full width on small screens */
+        justify-content: flex-end; /* Align mobile button to the right, nav to the center when active */
+        padding: 10px 0;
+        order: 3; /* Ensure it appears third */
+        position: relative; /* For positioning mobile menu button */
+    }
+
+    /* Override mobile menu background for yellow header on mobile */
+    .header-karcher .nav {
+        /* Inherit fixed positioning and other properties from style.css */
+        background-color: var(--karcher-light-grey); /* Light background for mobile menu when open */
+        top: auto; /* Reset top from style.css */
+        position: static; /* Let it flow normally */
+        height: auto; /* Let content define height */
+        padding: 0; /* Remove padding */
+        box-shadow: none; /* Remove box-shadow */
+        display: none; /* Hidden by default, shown by JS */
+    }
+
+    .header-karcher .nav.active {
+        display: flex; /* Show the mobile nav */
+        flex-basis: 100%; /* Take full width */
+        order: 4; /* Appear below other header elements */
+    }
+
+    .header-karcher .nav.active ul {
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        padding: 20px 0; /* Add padding to the list */
+    }
+
+    .header-karcher .nav.active ul li {
+        margin: 10px 0; /* Adjust spacing between list items */
+    }
+
+    .header-karcher .nav.active ul li a {
+        color: var(--karcher-dark-grey); /* Dark links in mobile menu when open */
+    }
+
+    .header-karcher .mobile-menu-btn {
+        display: flex; /* Show hamburger icon */
+        position: absolute; /* Position it relative to .header-right */
+        right: 20px;
+        top: 50%; /* Center vertically within .header-right */
+        transform: translateY(-50%);
+        z-index: 100; /* Ensure it's clickable */
+    }
+
+    .brand-hero {
+        padding-top: 100px; /* Adjust for collapsed header height */
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .brand-hero h1 {
+        font-size: 2.5rem;
+    }
+}
